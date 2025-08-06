@@ -1,0 +1,573 @@
+
+const products = [
+  {
+    id: 1,
+    name: "Fresh Bananas",
+    category: "Fruits",
+    price: 45,
+    img:"https://2.wlimg.com/product_images/bc-full/2024/6/13367104/watermark/fresh-robusta-banana-1715841644-7431117.jpeg",
+    quantity: "1 Dozen",
+    description: "skin and a soft, sweet flesh inside",
+    offer: 20,
+  },
+  {
+    id: 2,
+    name: "Alphonso Mango",
+    category: "Fruits",
+    price: 120,
+    img: "https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=600&q=80",
+    quantity: "1kg",
+    description: "The interior flesh is juicy, sweet, and orange-yellow, surrounding a large, flat pit.",
+    offer: 30,
+  },
+  {
+    id: 3,
+    name: "Tomatoes",
+    category: "Vegetables",
+    price: 30,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD2wJ5QdF-R79Q8JVcy1in217h7pvNmFeILw&s",
+    quantity: "1kg",
+    description: "a fruit, botanically classified as a berry, with a juicy pulp and seeds, typically red or yellow when ripe, and used in cooking. ",
+    offer: 15,
+  },
+ {
+    id: 4,
+    name: "Apples",
+    category: "Fruits",
+    price: 150,
+    img: "https://images.unsplash.com/photo-1567306226416-28f0efdc88ce?w=600&q=80",
+    quantity: "1kg",
+    description: "Crisp and juicy apples",
+    offer: 10,
+  },
+  {
+    id: 5,
+    name: "Chocolate Cookies",
+    category: "Snacks",
+    price: 85,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYLreq-yJJI_kwZcsQY01amlDTO4EIRMm7VQ&s",
+    quantity: "1 Packet",
+    description: "delightful treats, typically known for their rich, decadent chocolate flavor and a pleasing texture that can range from chewy to crisp depending on the recipe. ",
+    offer: 20,
+  },
+  {
+    id: 6,
+    name: "Masala Chips",
+    category: "Snacks",
+    price: 20,
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5VaBcvhwYAT_oF8EVrcD1v7qRMmZsCjRs6Q&s",
+    quantity: "1 Packet",
+    description: "a popular Indian snack consisting of crispy potato chips or fries coated in a flavorful blend of aromatic spices.",
+    offer: 15,
+  },
+  {
+  id: 7,
+  name: "Green Grapes",
+  category: "Fruits",
+  price: 80,
+  img: "https://m.media-amazon.com/images/I/51hl9a-KjQL._UF1000,1000_QL80_.jpg",
+  quantity: "1kg",
+  description: "Green grapes are small to medium-sized berries, typically round to oblong in shape, growing in clusters on cylindrical bunches. ",
+  offer: 20,
+},
+{
+  id: 8,
+  name: "Carrots",
+  category: "Vegetables",
+  price: 40,
+  img: "https://www.jiomart.com/images/product/original/590000186/carrot-orange-500-g-product-images-o590000186-p590000186-0-202409171905.jpg?im=Resize=(420,420)",
+  quantity: "1kg",
+  description: "Carrots are long, crunchy, and sweet root vegetables, typically orange in color, though they can also be found in shades of yellow, white, and purple. ",
+  offer: 10,
+},
+{
+  id: 9,
+  name: "Onions",
+  category: "Vegetables",
+  price: 35,
+  img: "https://m.media-amazon.com/images/I/51DJ-9xkuQL.jpg",
+  quantity: "1kg",
+  description: "The onion (Allium cepa) is a vegetable, commonly known as the bulb onion or common onion, appreciated for its pungent flavor and versatility in cooking.",
+  offer: 20,
+},
+{
+  id: 10,
+  name: "Lays Chips",
+  category: "Snacks",
+  price: 25,
+  img: "https://m.media-amazon.com/images/I/71DCs2yzAwL._UF1000,1000_QL80_.jpg",
+  quantity: "1 Packet",
+  description: "Lay's is a brand of potato chips with different flavors, as well as the name of the company that founded the chip brand in the United States.",
+  offer: 5,
+},
+{
+  id: 11,
+  name: "Milk Packet",
+  category: "Dairy",
+  price: 30,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThvSiqUMhuMYNWoImXBUdTezg3ljI_5kIGHw&s",
+  quantity: "1 Litre",
+  description: "Milk is a nutrient-rich, white liquid produced by mammals to feed their young and is also a common food source for humans. ",
+  offer: 10,
+},
+{
+  id: 12,
+  name: "Bread Loaf",
+  category: "Bakery",
+  price: 45,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqUB_NxUzsNS5qq1gm6x8OKMABSzbi2Rongw&s",
+  quantity: "1 Packet",
+  description: "A loaf of bread is a shaped mass of baked bread, typically oblong or rounded, and often sliced before eating. ",
+  offer: 20,
+},
+{
+  id: 13,
+  name: "Strawberries",
+  category: "Fruits",
+  price: 140,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0gRT71EwtApQ8ACXCGyfvsCkuxwIXsx2z8Q&s",
+  quantity: "1 Half kg",
+  description: "A strawberry is a sweet, juicy, and vibrant red fruit, often heart-shaped, with tiny edible seeds (achenes) embedded on its surface",
+  offer: 20,
+},
+{
+  id: 14,
+  name: "Broccoli",
+  category: "Vegetables",
+  price: 50,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5HI921PGF_R6Kqm0ESAHt9BT9snCb1lghkQ&s",
+  quantity: "1kg",
+  description: "Broccoli is a green vegetable from the cabbage family, known for its edible, tree-like flower heads and thick stalks.",
+  offer: 30,
+},
+{
+  id: 15,
+  name: "Eggs Pack (12)",
+  category: "Dairy",
+  price: 75,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkvqjzkASmxjAjPDXLRdREH-Mpm9XDtRt2bg&s",
+  quantity: "1 Dozen",
+  description: "Eggs, often associated with birds, are reproductive bodies consisting of an ovum (egg cell) and protective and nutritive envelopes. ",
+  offer: 20,
+},
+{
+  id: 16,
+  name: "Butter",
+  category: "Dairy",
+  price: 60,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpZfB1o5Gl22VfCtewzKQ1rCfjTA1ekUcvWg&s",
+  quantity: "500 Grams",
+  description:"Butter is a dairy product made from churning fresh or fermented cream or milk, resulting in a fatty substance that's primarily composed of butterfat (around 80%) and also contains water and milk proteins",
+  offer: 20,
+},
+{
+  id: 17,
+  name: "Biscuits",
+  category: "Snacks",
+  price: 35,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROwiSC6xQKxbnYWqE2ZSTi3A-LD2noDSmhPg&s",
+  quantity: "1 Packet",
+  description: "Crisp and Crunchy Biscuits",
+  offer: 5,
+},
+{
+  id: 18,
+  name: "Capsicum",
+  category: "Vegetables",
+  price: 45,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-YL3-SjwK66OYrsNDjEps8Z1vOQ6YyAQ3rw&s",
+  quantity: "1kg",
+  description: "Vegetables are edible plant parts, including leaves, stems, roots, bulbs, flowers, and seeds, typically consumed as part of a meal. ",
+  offer: 20,
+},
+{
+  id: 19,
+  name: "Cucumber",
+  category: "Vegetables",
+  price: 20,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYNvjGbvhkpEqfjz8YlOaaFFhId61kfVYkg&s",
+  quantity: "1kg",
+  description: "Vegetables are edible plant parts, including leaves, stems, roots, bulbs, flowers, and seeds, typically consumed as part of a meal. ",
+  offer: 20,
+},
+{
+  id: 20,
+  name: "Potatoes",
+  category: "Vegetables",
+  price: 120,
+  img: "https://hips.hearstapps.com/hmg-prod/images/types-of-potatoes-66b3a38f1ecd5.jpg?crop=1xw:0.8433521923620934xh;center,top&resize=1200:*",
+  quantity: "1kg",
+  description: "Vegetables are edible plant parts, including leaves, stems, roots, bulbs, flowers, and seeds, typically consumed as part of a meal. ",
+  offer: 20,
+},
+{
+  id: 21,
+  name: "Orange Juice",
+  category: "Beverages",
+  price: 55,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7JaCflU7fbhqxwS2tItXmOOiTrX4Ll6ayHA&s",
+  quantity: "1 Glass",
+  description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",
+  offer: 2,
+},
+{
+  id: 22,
+  name: "Paneer (200g)",
+  category: "Dairy",
+  price: 85,
+  img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXYeXP271T5qwgjUr_0MEqA72tO-TRBYMcqw&s",
+  quantity: "200 Grams",
+  description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",
+  offer: 20
+},
+ { id: 23, 
+  name: "CocaCola", 
+  category: "Beverages", 
+  price: 40, 
+  // img: "images/CocaCola.jpg",
+  img: "https://cdn.uengage.io/uploads/18085/image-179182-1711711756.jpeg",
+  quantity: "1 Bottle",
+  description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",
+  offer: 20,
+},
+ // 🥛 Dairy (3)
+  {
+    id: 24,
+    name: "Full Cream Milk",
+    category: "Dairy",
+    price: 60,
+    // image: "images/CreamMilk.jpg",
+    img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyS2yqdPjt6qLmcLXBiIoVo94sb2nWQmu1VA&s",
+    quantity: "1 Box",
+    description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",
+    offer: 30,
+  },
+  {
+    id: 25,
+    name: "Paneer Block",
+    category: "Dairy",
+    price: 150,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr1lSYMpVjmww1F7VaiBJwH7uj5oC_UWzWUg&s",
+    quantity: "1kg",
+    description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",
+    offer: 20,
+  },
+  {
+    id: 26,
+    name: "Curd",
+    category: "Dairy",
+    price: 40,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxZnsl6clp3-0nHVAwPh0cwZNfCqgVs--a_w&s",
+    quantity: "1 Litre Bucket",
+    description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",
+    offer: 20,
+  },
+
+  // 🥤 Beverages (6)
+  
+  {
+    id: 27,
+    name: "Pepsi",
+    category: "Beverages",
+    price: 38,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6JJtcm-kvrrNyTNgYarlNpgb0ZzZrGxDklw&s",
+    quantity: "1 Bottle",
+    description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",
+    offer: 10,
+  },
+  
+  {
+    id: 28,
+    name: "Lassi",
+    category: "Beverages",
+    price: 30,
+    image: "https://www.spicypunch.com/wp-content/uploads/2019/06/lassi-recipe-1280x720.jpg",
+    quantity: "1 Glass",
+    description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",
+    offer: 20,
+  },
+  {
+    id: 29,
+    name: "Green Tea",
+    category: "Beverages",
+    price: 70,
+    image: "https://domf5oio6qrcr.cloudfront.net/medialibrary/8468/conversions/Tea-thumb.jpg",
+    quantity: "1 Cup",
+    description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",
+    offer: 20,
+  },
+  {
+    id: 30,
+    name: "Coffee",
+    category: "Beverages",
+    price: 95,
+    image: "https://media.assettype.com/homegrown%2F2024-11-28%2Fd8kdthmm%2FWhatsApp-Image-2024-11-27-at-16.08.06.jpeg",
+    quantity: "1 Cup",
+    description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",
+    offer: 20,
+  },
+
+  // 🍞 Bakery (7)
+  {
+    id: 31,
+    name: "White Bread",
+    category: "Bakery",
+    price: 35,
+    image:"https://www.allrecipes.com/thmb/FcoT_ZL76jZomB-qOBf8v5duZ5A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/AR-20066-traditional-white-bread-DDMFS-4x3-f8e3aac2eee948dfacca38c877c59d14.jpg",
+    quantity: "1 Packet",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 20,
+  },
+  {
+    id: 32,
+    name: "Brown Bread",
+    category: "Bakery",
+    price: 45,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5T--UzGzVRRt8LDtlzlpuT4bYI_YRvya7UQ&s",
+    quantity: "1 Packet",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 20,
+  },
+  {
+    id: 33,
+    name: "Croissant",
+    category: "Bakery",
+    price: 80,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmf7wEBjUZj-kfyu1QI9cX027eNEfG3ulaHg&s",
+    quantity: "1 Packet",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 20,
+  },
+  {
+    id: 34,
+    name: "Donut",
+    category: "Bakery",
+    price: 55,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgDeEGyhjkjqtUoGf-vsPsTV9rIIqhnbBYDg&s",
+    quantity: "1 Piece",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 30,
+  },
+  {
+    id: 35,
+    name: "Puff Pastry",
+    category: "Bakery",
+    price: 65,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRQ7w931FV1qPe1sgbXv81P2tyTO7C3J-2og&s",
+    quantity: "1 Piece",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 20,
+  },
+  {
+    id: 36,
+    name: "Cookies",
+    category: "Bakery",
+    price: 85,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSuFaUe2_OoBJc8oDKmWRjfRIZesuf2morSA&s",
+    quantity: "1 Packet",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 20,
+  },
+  {
+    id: 37,
+    name: "Fruit Cake",
+    category: "Bakery",
+    price: 120,
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUBnTMXXpyYosVkYphQtObZgGrOwo7iG9bGA&s",
+    quantity: "1 Piece",
+    description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",
+    offer: 40,
+  },
+  {
+  id: 100, name: "Salted Pretzels", category: "Snacks", price: 150, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMLfVSsPiHHHgee5AVMs0sOvFic0x0aei0Gw&s",quantity: "1 Packet",description: "Snacks are diverse, ranging from sweet treats like cookies and cakes to savory options like chips, nuts, and traditional Indian namkeen.",offer: 20,
+},
+{
+  id: 101, name: "Popcorn Tub", category: "Snacks", price: 51, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBRhPQonkCEDpA83u3nGQYDG8NNE29fgwAKQ&s",quantity: "1 Tub",description: "Snacks are diverse, ranging from sweet treats like cookies and cakes to savory options like chips, nuts, and traditional Indian namkeen.",offer: 20,
+},
+{
+  id: 102, name: "Energy Bars", category: "Snacks", price: 352, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCYn5v44JdfIMz9lWvvZNIq93806_eaYBP8w&s",quantity: "1 Bar",description: "Snacks are diverse, ranging from sweet treats like cookies and cakes to savory options like chips, nuts, and traditional Indian namkeen.",offer: 20,
+},
+{
+  id: 103, name: "Peanut Chikki", category: "Snacks", price: 470, img: "https://www.cookwithmanali.com/wp-content/uploads/2018/01/Peanut-Chikki-500x500.jpg",quantity: "1 Packet",description: "Snacks are diverse, ranging from sweet treats like cookies and cakes to savory options like chips, nuts, and traditional Indian namkeen.",offer: 20,
+},
+{
+  id: 104, name: "Trail Mix", category: "Snacks", price: 47, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAXYsJD1ixlnDi0AX7E-kDRAITFT-j-N5LCA&s", quantity: "1 Packet",description: "Snacks are diverse, ranging from sweet treats like cookies and cakes to savory options like chips, nuts, and traditional Indian namkeen.",offer: 20,
+},
+
+{
+  id: 105, name: "Cheese Cubes", category: "Dairy", price: 90, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV1LaQBfgXdd0uQiYz79d51NEtuBzTriFb_Q&s",quantity: "1 Packet",description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",offer: 20,
+},
+{
+  id: 106, name: "Greek Yogurt", category: "Dairy", price: 70, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqQMlE_1ieRExfAPTHNanNgm5nGl_NyW_rbw&s",quantity: "1 Packet",description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",offer: 20,
+},
+{
+  id: 107, name: "Flavored Milk", category: "Dairy", price: 45, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFbo3LxwNFRoqrlfyvAQvrYpELKaPqkdXVKg&s",quantity: "1 Packet",description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",offer: 20,
+},
+{
+  id: 108, name: "Ghee Jar", category: "Dairy", price: 120, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2Ydrs0U7vJf2aTQ-iYcgNzM-uPAuogzlGmw&s",quantity: "1 Packet",description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",offer: 20,
+},
+{
+  id: 109, name: "Cream Pack", category: "Dairy", price: 65, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgmjp0mPBdjoXP7QxBFynL2Zgo5s7Xd0eYaw&s",quantity: "1 Packet",description: "Dairy products are foods made from the milk of mammals, primarily cows, but also goats, sheep, and other animals.",offer: 20,
+},
+
+{
+  id: 110, name: "Cold Coffee", category: "Beverages", price: 55, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGRUT2D8wpgtDk5XAMkd1vyMXXL84UEZB3qg&s",quantity: "1 Glass",description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",offer: 30,
+},
+{
+  id: 111, name: "Lemon Soda", category: "Beverages", price: 35, img: "https://media.istockphoto.com/id/544468096/photo/lemonade-with-lemon-mint-and-ice.jpg?s=612x612&w=0&k=20&c=XkJqJVWwovEKvCJM7fY59hL_rj7WgH9v_0ZBjflugKA=",quantity: "1 Glass",description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",offer: 30,
+},
+{
+  id: 112, name: "Protein Shake", category: "Beverages", price: 95, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR58OJqB2e05crRoNu4K3j1t_HXXcJPEZu9FQ&s",quantity: "1 Glass",description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",offer: 30,
+},
+{
+  id: 113, name: "Coconut Water", category: "Beverages", price: 40, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhbEejjG8ht5-AZQsmZ0_yGjNTXQnwgSHA7g&s",quantity: "1 Glass",description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",offer: 30,
+},
+{
+  id: 114, name: "Mango Juice", category: "Beverages", price: 50, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM19D4ys3BnojgW3K2bwW_UXPv6CGccEPcVw&s",quantity: "1 Glass",description: "Beverages are drinks intended for human consumption, encompassing a wide range of fluids from plain water to alcoholic drinks and everything in between.",offer: 30,
+},
+
+{
+  id: 115, name: "Garlic Bread", category: "Bakery", price: 60, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuh6GS3uRlikeCkjT9t_eLW2v0yy2yGk1rrQ&s",quantity: "1 Packet",description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",offer: 20,
+},
+{
+  id: 116, name: "Buns Pack", category: "Bakery", price: 25, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaCcudNUuaT8vuDuZdlPD_5VVuj_MO-JH6FA&s",quantity: "1 Packet",description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",offer: 20,
+},
+{
+  id: 117, name: "Danish Pastry", category: "Bakery", price: 90, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrik_AxsJ60TiBcgyJ5cm1yf70bCuSGIzNzQ&s",quantity: "1 Packet",description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",offer: 20,
+},
+{
+  id: 118, name: "Mini Cupcakes", category: "Bakery", price: 75, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5cTRSLtQqBZo774wV_ZVJMKJJhhEcRYGqzg&s",quantity: "1 Packet",description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",offer: 20,
+},
+{
+  id: 119, name: "Multigrain Bread", category: "Bakery", price: 55, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9fp6egYqtoCxt8FBRtryzvejFMbYhps4OKQ&s",quantity: "1 Packet",description: "Bakery products encompass a wide array of baked goods, from simple staples like bread and rolls to more elaborate creations like cakes, pastries, and cookies.",offer: 20,
+},
+
+{
+  id: 120, name: "Wireless Earbuds", category: "Electronics", price: 999, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUN6tRS4kz6YkwcZo3i9I4YIU3gl-4A-7oIg&s",quantity: "1 Set",description: "Electronic products encompass a wide range of devices that utilize electronic circuits and components to perform various functions, including information processing, energy conversion, and control. ",offer: 50,
+},
+{
+  id: 121, name: "Power Bank", category: "Electronics", price: 799, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-g0OKItxnv1y9Ol8MHiu-OnN6Ye_uaAUmHQ&s",quantity: "1 Set",description: "Electronic products encompass a wide range of devices that utilize electronic circuits and components to perform various functions, including information processing, energy conversion, and control. ",offer: 50,
+},
+{
+  id: 122, name: "USB-C Cable", category: "Electronics", price: 199, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPzIWu5tFA61eGGdRsGxUtZFktIL5XVzeTcQ&s",quantity: "1 Set",description: "Electronic products encompass a wide range of devices that utilize electronic circuits and components to perform various functions, including information processing, energy conversion, and control. ",offer: 50,
+},
+{
+  id: 123, name: "Bluetooth Speaker", category: "Electronics", price: 1450, img:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvGUV-d6zDSBTdY6EqmuS15OrzQXkar6UBVg&s",quantity: "1 Set",description: "Electronic products encompass a wide range of devices that utilize electronic circuits and components to perform various functions, including information processing, energy conversion, and control. ",offer: 50,
+},
+{
+  id: 124, name: "Smart Bulb", category: "Electronics", price: 299, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTT8oDNjUzo7kjsa_BySR8DWl_u8T_k1RvBnw&s",quantity: "1 Set",description: "Electronic products encompass a wide range of devices that utilize electronic circuits and components to perform various functions, including information processing, energy conversion, and control. ",offer: 50,
+},
+
+{
+  id: 125, name: "Baby Wipes", category: "Baby Products", price: 150, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkWy5UdK6If-z2CDHdD0J9Oocuu33wxZBtLA&s",quantity: "1 Packet",description: "Baby products are designed to care for the sensitive skin and hygiene needs of infants and young children, typically under the age of three",offer: 30,
+},
+{
+  id: 126, name: "Baby Shampoo", category: "Baby Products", price: 120, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRInUrI_xZokJNp7L8hl7JegU0J7Tpm6Achzw&s",quantity: "1 Packet",description: "Baby products are designed to care for the sensitive skin and hygiene needs of infants and young children, typically under the age of three",offer: 30,
+},
+{
+  id: 127, name: "Diapers (L)", category: "Baby Products", price: 350, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDyoV_7FGNdh6sXZr6xx6MGr0H6cbDNz7p4A&s",quantity: "1 Packet",description: "Baby products are designed to care for the sensitive skin and hygiene needs of infants and young children, typically under the age of three",offer: 30,
+},
+{
+  id: 128, name: "Feeding Bottle", category: "Baby Products", price: 180, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQi3BxqNbu_YPYlcxSgQ2ojnd6lOt8pTZjQg&s",quantity: "1 Bottle",description: "Baby products are designed to care for the sensitive skin and hygiene needs of infants and young children, typically under the age of three",offer: 30,
+},
+{
+  id: 129, name: "Baby Powder", category: "Baby Products", price: 90, img: "https://images-static.nykaa.com/media/catalog/product/2/5/2589fa7N_8901012111048_1.jpg",quantity: "1 Bottle",description: "Baby products are designed to care for the sensitive skin and hygiene needs of infants and young children, typically under the age of three",offer: 30,
+},
+
+{
+  id: 130, name: "Face Wash", category: "Beauty Products", price: 140, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFlH6MdZxsfYSxe3DqMZo-i6nYLrfzOCRDg&s",quantity: "1 Tube",description: "Beauty products can be broadly categorized into those for skincare, makeup, and haircare. Skincare products cleanse, exfoliate, and protect the skin, while makeup enhances features or conceals imperfections.",offer: 40,
+},
+{
+  id: 131, name: "Moisturizer", category: "Beauty Products", price: 200, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3BlbO4rk5sTXu3mKPz8KWZfZ_3Xbfn2Gk2g&s",quantity: "1 Tube",description: "Beauty products can be broadly categorized into those for skincare, makeup, and haircare. Skincare products cleanse, exfoliate, and protect the skin, while makeup enhances features or conceals imperfections.",offer: 40,
+},
+{
+  id: 132, name: "Lip Balm", category: "Beauty Products", price: 90, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRCKnUVmi4ga7c19Mc_PytHqhCcgfjMz9GOw&s",quantity: "1 Tube",description: "Beauty products can be broadly categorized into those for skincare, makeup, and haircare. Skincare products cleanse, exfoliate, and protect the skin, while makeup enhances features or conceals imperfections.",offer: 40,
+},
+{
+  id: 133, name: "Compact Powder", category: "Beauty Products", price: 220, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7KfKT2fk88MDF4cj4aFzoAouoLT1bmcVTAQ&s",quantity: "1 Bottle",description: "Beauty products can be broadly categorized into those for skincare, makeup, and haircare. Skincare products cleanse, exfoliate, and protect the skin, while makeup enhances features or conceals imperfections.",offer: 40,
+},
+{
+  id: 134, name: "Nail Polish Set", category: "Beauty Products", price: 180, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4R6XTVaca1GJg9HYFFJ7U2wCDKK8-CtzutQ&s",quantity: "1 Set",description: "Beauty products can be broadly categorized into those for skincare, makeup, and haircare. Skincare products cleanse, exfoliate, and protect the skin, while makeup enhances features or conceals imperfections.",offer: 40,
+},
+
+{
+  id: 135, name: "Mystery Novel", category: "Books", price: 250, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHeIea0b6yfHd6wO_uyZCD9c7uaZ4mWZE1fw&s",quantity: "1 Book",description: "Mystery novels are a genre of fiction centered around a crime or puzzle that must be solved, often involving a detective or amateur sleuth. ",offer: 30,
+},
+{
+  id: 136, name: "Self Help Book", category: "Books", price: 320, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSR11E1-f9uKjpXpDjUxWLJ4zjlaCA98VzQjw&s",quantity: "1 Book",description: "Self-help books are nonfiction works that aim to guide readers in solving personal problems or improving specific areas of their lives",offer: 30,
+},
+{
+  id: 137, name: "Science Fiction", category: "Books", price: 400, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbadjOf3d5Cdla0gqPCyP1UFNdeSRa7li5rA&s",quantity: "1 Book",description: "Usually futuristic, science fiction speculates about alternative ways of life made possible by technological change",offer: 30,
+},
+{
+  id: 138, name: "Children's Storybook", category: "Books", price: 180, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQR8hvJaLM7hUtpmyXsXjULB9gXbocqvQ1ZLg&s",quantity: "1 Book",description: "A good children's book description should be concise, engaging, and age-appropriate, introducing the main characters, setting, and conflict in a way that sparks curiosity and excitement",offer: 30,
+},
+{
+  id: 139, name: "Cookbook", category: "Books", price: 300, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJrYPY_RctJTaql4TXc8YmES14H7URFu3YOA&s",quantity: "1 Book",description: "cookbook, collection of recipes, instructions, and information about the preparation and serving of foods.",offer: 30,
+},
+
+{
+  id: 140, name: "Paracetamol Tablets", category: "Medicines", price: 25, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaW1JXM6KGNtTJ7V3f640heggCg--xnI6BEQ&s",quantity: "1 Sheet",description: "Paracetamol is a common painkiller used to treat aches and pain. It can also be used to reduce a high temperature.",offer: 20,
+},
+{
+  id: 141, name: "Cough Syrup", category: "Medicines", price: 80, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaY6aGYwm9RFYXKxqinTJJFtgKQO9FQtVcbA&s",quantity: "1 Bottle",description: "a medicated, syruplike fluid, usually flavored and nonnarcotic or mildly narcotic, for relieving coughs or soothing irritated throats.",offer: 20,
+},
+{
+  id: 142, name: "Multivitamin Capsules", category: "Medicines", price: 150, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF3S3yM9_jHoIAmu3dDDUDqtGI7B5EQ1LGFQ&s",quantity: "1 Sheet",description: "Multivitamins are used to provide vitamins that are not taken in through the diet. Multivitamins are also used to treat vitamin deficiencies",offer: 20,
+},
+{
+  id: 143, name: "Antacid Tablets", category: "Medicines", price: 60, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAhSf9GV441Xk-MnrxyqQAms-S1ivPQC-wOg&s",quantity: "1 Sheet",description: "Antacid tablets are medications designed to neutralize excess stomach acid, providing relief from symptoms like heartburn, indigestion, and acid reflux.",offer: 20,
+},
+{
+  id: 144, name: "Ointment Tube", category: "Medicines", price: 45, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhL4JVV32ypuSxt0u5mFVwMVv9LeyVbbfjew&s",quantity: "1 Tube",description: "Ointment tubes are typically cylindrical, hollow containers, often made of plastic or aluminum, used to store and dispense viscous ointments, creams, or gels.",offer: 20,
+},
+
+{
+  id: 145, name: "Office Chair", category: "Furniture", price: 3500, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT693DfqQA6x5KEdlpziR5BnHn6h5WDnt5mmQ&s",quantity: "1 Chair",description: "Furniture encompasses a wide array of items designed for various purposes, including seating, storage, sleeping, and working. ",offer: 60,
+},
+{
+  id: 146, name: "Bookshelf", category: "Furniture", price: 2200, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiDy3R2dUKJYT7WzBW9MERHS8iFXsZ2g5ZXQ&s",quantity: "1 Shelf",description: "Furniture encompasses a wide array of items designed for various purposes, including seating, storage, sleeping, and working. ",offer: 60,
+},
+{
+  id: 147, name: "Foldable Table", category: "Furniture", price: 1600, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTooPLJbqxuU6KIsvtJ55Y1GnfOVCc2V1wJeQ&s",quantity: "1 Table",description: "Furniture encompasses a wide array of items designed for various purposes, including seating, storage, sleeping, and working. ",offer: 60,
+},
+{
+  id: 148, name: "Sofa Set", category: "Furniture", price: 8500, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6DVVdi31AGtB4j2lsoIlkbPCqa2rJ6rn2sQ&s",quantity: "1 Set",description: "Furniture encompasses a wide array of items designed for various purposes, including seating, storage, sleeping, and working. ",offer: 60,
+},
+{
+  id: 149, name: "Study Desk", category: "Furniture", price: 2700, img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyzzdn6uCQdPEeH8dZyjqRILHi7PsH5EUw3Q&s",quantity: "1 Desk",description: "Furniture encompasses a wide array of items designed for various purposes, including seating, storage, sleeping, and working. ",offer: 60,
+},
+{
+    id: 201,
+    name: "Wireless Bluetooth Earbuds",
+    category: "Electronics",
+    price: 1799,
+    img: "https://www.gonoise.com/cdn/shop/files/1_ef1e739f-ffc9-4a3e-ade5-2ddcad973096.png?v=1714719085",
+    quantity: "1 set",
+    description: "High-quality sound, long battery life, and noise cancellation.",
+    offer: 70,
+  },
+  {
+    id: 202,
+    name: "Smart LED TV 43 Inch",
+    category: "Electronics",
+    price: 25999,
+    img: "https://m.media-amazon.com/images/I/51lYbJhOmbL._UF1000,1000_QL80_.jpg",
+    quantity: "1 TV",
+    description: "Full HD Smart TV with streaming apps and voice remote.",
+    offer: 70,
+  },
+  {
+    id: 203,
+    name: "Portable Power Bank 20000mAh",
+    category: "Electronics",
+    price: 1299,
+    img: "https://m.media-amazon.com/images/I/71qGismu6NL._SL1500_.jpg",
+    quantity: "one",
+    description: "Fast charging dual output power bank with LED indicator.",
+    offer:70,
+  }
+
+];
+
+export default products;

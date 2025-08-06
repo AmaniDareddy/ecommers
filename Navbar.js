@@ -28,12 +28,12 @@ export default function Navbar({ toggleSidebar }) {
     const user = {
     name: 'Amani',
     membership: 'Gold Member',
-    image: 'profile.jpeg',
+    image: '/ecommers/profile.jpeg',
   };
   
   return (
     <nav className="navbar">
-    <img src="ATS.png" alt="Logo" className="logo-image" />
+    <img src="/ecommers/ATS.png" alt="Logo" className="logo-image" />
     <FaBars onClick={toggleSidebar} className="toggle-icon" />
       <div className="brand">
         <Link to="/"></Link>
@@ -77,4 +77,5 @@ export default function Navbar({ toggleSidebar }) {
     </nav>
   );
 }
+
 

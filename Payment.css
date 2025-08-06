@@ -1,0 +1,49 @@
+.payment-module {
+  margin-top: 25px;
+}
+
+.payment-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.payment-tab {
+  flex: 1;
+  text-align: center;
+  padding: 12px 0;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.payment-tab.active {
+  background-color: #4caf50;
+  color: #fff;
+  border-color: #4caf50;
+}
+
+.payment-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fdfdfd;
+}
+
+.payment-content input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.payment-content input:focus {
+  border-color: #4caf50;
+  outline: none;
+}

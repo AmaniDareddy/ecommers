@@ -1,0 +1,66 @@
+.support-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 30px;
+}
+
+.support-sections {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.chat-box, .faq-box, .help-box {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #eee;
+}
+
+.chat-messages {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.chat-msg.user { text-align: right; color: #007bff; }
+.chat-msg.bot { text-align: left; color: #28a745; }
+
+.chat-input {
+  display: flex;
+  gap: 10px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 5px;
+}
+
+.faq-item { margin-bottom: 10px; cursor: pointer; }
+.faq-question { font-weight: bold; }
+.faq-answer { margin-left: 10px; }
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+form input, form select, form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 6px;
+}
+
+form button {
+  background: #ff3366;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+}
